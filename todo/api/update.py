@@ -62,7 +62,7 @@ def update(client, user_id, data, table_name):
     table = client.Table(table_name)
 
     result = table.update_item(
-        ReturnValues='UPDATED_NEW',
+        ReturnValues='ALL_NEW',
         ExpressionAttributeNames=ex_attr_name,
         ExpressionAttributeValues=ex_attr_value,
         Key={
